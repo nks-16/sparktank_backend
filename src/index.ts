@@ -14,8 +14,8 @@ const port = 5000;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-  origin: true, // Allow all origins
-  credentials: true // Allow credentials like cookies
+  origin: ["https://sparktank-nisb.vercel.app/", "http://localhost:3000"],
+  credentials: true
 }));
 
 
