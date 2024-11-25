@@ -12,7 +12,10 @@ const port = 5000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://sparktank-nisb.vercel.app/",
+  credentials: true
+}));
 
 // MongoDB Atlas connection URL from .env
 const dbURI = process.env.MONGO_URI;
